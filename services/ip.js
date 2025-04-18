@@ -35,6 +35,31 @@ const ipService = {
             ipInitRange: binParaIp(ipInicioBin),
             ipEndRange: binParaIp(ipFimBin),
         }
+    },
+
+    validIp(ipCidr){
+        const regex = /^(\d{1,3}\.){3}\d{1,3}\/\d{1,2}$/
+        if (!regex.test(ipCidr)){
+            return false
+        }
+
+        const [ip, cidrStr] = ipCidr.split('/')
+        const cidr = parseInt(cidrStr)
+        if (cidr < 0 || cidr > 32){
+            return false
+        }
+
+        const octetos = ip.split('.').map(Number)
+        if (octetos.length !== 4){
+            return false
+        }
+
+        for (const o of octetos) {
+            if (isNaN(o) || o < 0 || o > 255){
+                return false
+            }
+        }
+        return true
     }
 }
 
