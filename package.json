@@ -2,6 +2,7 @@
   "dependencies": {
     "binary-parse": "^0.11.0",
     "binary-parser": "^2.2.1",
+    "cors": "^2.8.5",
     "express": "^5.1.0",
     "nodemon": "^3.1.9"
   },
@@ -10,11 +11,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon .server/app.js",
+    "back": "nodemon ./server/app.js",
+    "front": "cd ./front && npm start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs"
+  "type": "commonjs",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.4"
+  }
 }
