@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "binary-parse": "^0.11.0",
+    "binary-parser": "^2.2.1",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.9"
+  },
+  "name": "cidr-ipv4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
